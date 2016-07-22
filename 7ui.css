@@ -1,0 +1,358 @@
+﻿/* GENERAL */
+body {
+    background: rgb(240, 240, 240);
+    font-family: NSimSun, SimSun;
+    font-size: 9px;
+    cursor: default;
+    -webkit-user-select: none;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+.everest {
+    z-index: 999999;
+}
+
+span {
+    vertical-align: middle;
+}
+
+.vii-hide {
+    visibility: collapse;
+}
+
+input {
+    font-size: 9px;
+    font-family: NSimSun, SimSun;
+    outline: none;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+/* # CONTROLS */
+/* ### Button */
+
+a.viiButton {
+    /* Make <a> display as a normal div block. */
+    display: inline-block;
+    text-decoration: none;
+    cursor: default;
+    text-align: center;
+    outline: none;
+    color: black;
+    /* Fix text padding of <a> on Chrome. */
+    padding: 4px 7px 5px 7px;
+}
+
+/*  Change the color when events take place.*/
+.viiButton {
+    background: linear-gradient(to bottom, #f0f0f0 0%, #ebebeb 50%, #dddddd 50.01%, #cfcfcf 100%);
+    box-shadow: inset -1px -1px 1px #fcfcfc, inset 1px 1px 1px #fcfcfc;
+    border: 1px solid #707070;
+    border-radius: 3px;
+}
+
+.viiButton:focus {
+    box-shadow: inset -1px -1px 1px #48d8fb, inset 1px 1px 1px #48d8fb;
+    border: 1px solid #3c7fb1;
+}
+
+.viiButton:hover {
+    box-shadow: inset -1px -1px 1px #fafdfe, inset 1px 1px 1px #fafdfe;
+    border: 1px solid #3c7fb1;
+    background: linear-gradient(to bottom, #eaf6fd 0%, #d9f0fc 50%, #bee6fd 50.01%, #a7d9f5 100%);
+}
+
+.viiButton:active {
+    box-shadow: inset -1px -1px 1px #9eb0ba, inset 1px 1px 1px #9eb0ba;
+    border: 1px solid #2c628b;
+    background: linear-gradient(to bottom, #e5f4fc 0%, #c4e5f6 50%, #98d1ef 50.01%, #68b3db 100%);
+}
+
+/* ### ComboBox */
+
+.vii-combobox {
+    position: relative;
+    display: inline-flex;
+    background: white;
+    padding-left: 3px;
+    border-radius: 2px;
+    border: 1px solid #b7d9ed;
+    border-top: 1px solid #3d7bad;
+}
+
+.vii-combobox-text {
+    flex: 1;
+}
+
+.vii-combobox-text > input {
+    width: 100%;
+    border: none;
+    padding-bottom: 2px;
+}
+
+.vii-combobox-button {
+    flex: 0 0 15px;
+    position: relative;
+    margin-right: 1px;
+}
+
+.vii-combobox-button > .vii-combobox-button-icon {
+    background: 50% 50% no-repeat url(res/combobox-button.png);
+    pointer-events: none;
+}
+
+.vii-combobox-button > div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.vii-combobox-button > .vii-combobox-button-color {
+    opacity: 0;
+    transition: opacity ease-in-out 0.2s;
+    margin: 0 1px;
+}
+
+.vii-combobox-button > .vii-combobox-button-color:hover {
+    margin-left: 0;
+    opacity: 1;
+    border-left: 1px solid #3c7fb1;
+    border-right: 1px solid #3c7fb1;
+    box-shadow: inset -1px -1px 1px #fafdfe, inset 1px 1px 1px #fafdfe;
+    background: linear-gradient(to bottom, #eaf6fd 0%, #d9f0fc 50%, #bee6fd 50.01%, #a7d9f5 100%);
+}
+
+.vii-combobox-button > .vii-combobox-button-color:active {
+    box-shadow: inset -1px -1px 1px #aec3ce, inset 1px 1px 1px #9ebbcc;
+    background: linear-gradient(to bottom, #deedf6 0%, #c9e7f7 50%, #98d1ef 50.01%, #63acd3 100%);
+}
+
+.vii-combobox-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -1px; /* fix the border of parent */
+    min-height: 100%;
+    width: 100%;
+    border: 1px solid #c6c7d2;
+    border-top: 1px solid #83868d;
+    box-shadow: rgb(212, 212, 212) 1px 1px 0.5px 0.5px;
+    background: white;
+}
+
+.vii-combobox-option {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.vii-combobox-option:hover {
+    background-color: #3399ff;
+    color: white;
+}
+
+.vii-textbox {
+    border: 1px solid #e2e3ea;
+    border-top: 1px solid #abadb3;
+    padding: 1px 1px 3px;
+    border-radius: 2px;
+    transition: border ease-in-out 0.2s;
+}
+
+.vii-textbox:hover, .vii-textbox:focus {
+    border: 1px solid #c5daed;
+    border-top: 1px solid #5794bf;
+}
+
+/* TABLE */
+
+.vii-table {
+    border-top: 1px solid #a0a0a0;
+    border-left: 1px solid #a0a0a0;
+    background: white;
+}
+
+.vii-table .vii-table-center {
+    background: #f7f8fa;
+    min-width: 39px;
+}
+
+.vii-table .vii-table-left {
+    min-width: 39px;
+    background: linear-gradient(to right, white 0%, #f1f2f4 100%);
+    position: relative;
+    display: flex;
+}
+
+.vii-table th {
+    padding: 4px 5px 3px;
+    border-right: 1px solid #e3e4e6;
+    background: linear-gradient(to bottom, white 0%, white 50%, #f7f8fa 50.01%, #f1f2f4 100%);
+    font-weight: normal;
+}
+
+.vii-table td {
+    padding: 7px 3px;
+    background: white;
+}
+
+.vii-table th, .vii-table td {
+    min-width: 100px;
+    min-height: 18px;
+    text-align: left;
+    border-bottom: 1px solid #a0a0a0;
+    border-right: 1px solid #a0a0a0;
+    color: black;
+}
+
+tr.vii-table-selected > td {
+    background: #3a92ff;
+    color: white;
+}
+
+tr.vii-table-selected > th {
+    background: #3a92ff;
+    color: white;
+}
+
+tr.vii-table-selected > td.vii-table-left {
+    background: linear-gradient(to right, #bce4f9 0%, #8dd6f7 25.01%, #8ad1f5 100%) !important;
+    box-shadow: inset -1px -1px 1px #72bcdf, inset 1px 1px 1px #dbf3ff;
+}
+
+.vii-table-selected .vii-table-tr-select-icon {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: 80% 50% no-repeat url(res/table-mark.png);
+    pointer-events: none;
+}
+
+table.nested-table {
+    margin-left: 40px;
+}
+
+tr.vii-nested-table-tr {
+    display: none;
+}
+
+.vii-table-show-button {
+    position: absolute;
+    width: 21px;
+    height: 100%;
+    align-self: center;
+    background: 0 50% no-repeat url(res/plus-minus-button.png);
+    margin-left: 4%;
+}
+
+.vii-table-show-button.vii-button-active {
+    background-position-x: -16px;
+}
+
+/* SPLITVIEW */
+
+.vii-splitview {
+    display: flex;
+    width: 450px;
+}
+
+.vii-splitview-splitter {
+    cursor: e-resize;
+    min-width: 7px;
+    width: 7px;
+    background: no-repeat 50% 50% url(res/splitter.png);
+    position: relative;
+    /*box-shadow:1px 1px #b3a9a9;*/
+}
+
+.vii-splitview-splitter > div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 1px solid #757575;
+    box-shadow: 1px 1px #b3a9a9;
+    background: no-repeat 50% 50% url(res/splitter.png);
+}
+
+.vii-splitview-part {
+    overflow: hidden;
+}
+
+.vii-tabview {
+    display: flex;
+    flex-flow: column;
+}
+
+.vii-tabview-pages {
+    width: 100%;
+    height:100%;
+    border: 1px solid #898c95;
+}
+
+.vii-tabview-tabpage {
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: none;
+}
+
+.vii-tabview-tabpage.vii-active {
+    display: block;
+}
+
+.vii-tabview-tabbutton {
+    display: block;
+    float: left;
+    box-shadow: inset -1px 0px #fdfdfd, inset 1px 1px 1px #f7f7f7;
+    padding: 2px 4px 1px 5px;
+    border: 1px solid #898c95;
+    border-bottom: none;
+    background: linear-gradient(to bottom, #f2f2f2 0%, #ebebeb 50%, #dddddd 50.01%, #cfcfcf 100%);
+    margin-top: 3px;
+}
+
+.vii-tabview-tabbutton:hover {
+    border: 1px solid #3c7fb1;
+    border-bottom: none;
+    background: linear-gradient(to bottom, #eaf6fd 0%, #d9f0fc 50%, #bee6fd 50.01%, #a7d9f5 100%);
+}
+
+.vii-tabview-tabbutton.vii-active {
+    background: white;
+    border-color: #898c95;
+    padding: 2px 4px 4px 5px;
+    margin-top: 0;
+}
+
+/* TOOLBAR */
+.vii-toolbar {
+    padding: 4px 0 20px 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, white 0%, #f8f8f8 40%, #f8f8f8 70%, #f0f0f0 100%);
+}
+
+.vii-toolbar-button {
+    display: inline-block;
+    padding: 13px 1px;
+    margin-right: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.00);
+}
+
+.vii-toolbar-button:hover {
+    background: #c2e0ff;
+    border: 1px solid #3399ff;
+}
+
+.vii-toolbar-button:active {
+    background: #99ccff;
+    border: 1px solid #3399ff;
+}
