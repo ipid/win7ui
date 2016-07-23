@@ -357,3 +357,20 @@ tr.vii-nested-table-tr {
         background: #99ccff;
         border: 1px solid #3399ff;
     }
+
+/* FRAME */
+.vii-frame {
+    margin: 3px;
+    box-shadow: inset 1px 1px white, 1px 1px white;
+    border: 1px solid #a0a0a0;
+}
+
+    .vii-frame::before {
+        position: relative;
+        top: -7px;
+        left: 6px;
+        content: "装逼现场";
+        background: #f0f0f0;
+        padding: 2px;
+        z-index: 99999;
+    }
