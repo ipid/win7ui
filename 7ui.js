@@ -8,6 +8,7 @@
         ELEMENTNOTEXIST: "ElementNotExist"
     };
 
+    /* COMBOBOX */
     // Initialise the drag-down button of combobox
     var listButton = document.getElementsByClassName("vii-combobox-button");
     for (var i = 0; i < listButton.length; i++) {
@@ -29,8 +30,7 @@
 
     function climbDOMTree(elm, tgtName, prop) {
         var next = elm;
-        do
-        {
+        do {
             if (typeof next === "undefined" || !next[prop]) {
                 throw _PN.ELEMENTNOTEXIST;
                 return undefined;
@@ -48,6 +48,7 @@
         return climbDOMTree(elm, broName, "nextElementSibling");
     }
 
+    /* TABLEBOX */ 
     // Select table-row by clicking
     var listTr = document.getElementsByTagName("tr");
     for (var i = 0; i < listTr.length; i++) {
@@ -99,6 +100,7 @@
         });
     }
 
+    /* SPLITTER */
     var listSplitter = document.getElementsByClassName("vii-splitview-splitter");
 
     function splitterMoving(e) {
@@ -160,9 +162,10 @@
         });
     }
 
+    /* TABVIEW */
     function getTabButtonPage(tbV) {
         var a = tbV.getElementsByClassName("vii-active");
-        return {button: a[0], page: a[1]};
+        return { button: a[0], page: a[1] };
     }
 
     var listTabView = document.getElementsByClassName("vii-tabview");
@@ -191,7 +194,7 @@
                 var page = this._parentTab.getElementsByClassName("vii-tabview-tabpage")[this._index];
                 page.classList.add("vii-active");
 
-                this._parentTab._active = {button: this, page: page};
+                this._parentTab._active = { button: this, page: page };
             });
         }
     }
