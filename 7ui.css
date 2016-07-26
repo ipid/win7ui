@@ -32,7 +32,7 @@ input {
 /* # CONTROLS */
 /* ### Button */
 
-a.viiButton {
+a.vii-button {
     /* Make <a> display as a normal div block. */
     display: inline-block;
     text-decoration: none;
@@ -45,25 +45,25 @@ a.viiButton {
 }
 
 /*  Change the color when events take place.*/
-.viiButton {
+.vii-button {
     background: linear-gradient(to bottom, #f0f0f0 0%, #ebebeb 50%, #dddddd 50.01%, #cfcfcf 100%);
     box-shadow: inset -1px -1px 1px #fcfcfc, inset 1px 1px 1px #fcfcfc;
     border: 1px solid #707070;
     border-radius: 3px;
 }
 
-    .viiButton:focus {
+    .vii-button:focus {
         box-shadow: inset -1px -1px 1px #48d8fb, inset 1px 1px 1px #48d8fb;
         border: 1px solid #3c7fb1;
     }
 
-    .viiButton:hover {
+    .vii-button:hover {
         box-shadow: inset -1px -1px 1px #fafdfe, inset 1px 1px 1px #fafdfe;
         border: 1px solid #3c7fb1;
         background: linear-gradient(to bottom, #eaf6fd 0%, #d9f0fc 50%, #bee6fd 50.01%, #a7d9f5 100%);
     }
 
-    .viiButton:active {
+    .vii-button:active {
         box-shadow: inset -1px -1px 1px #9eb0ba, inset 1px 1px 1px #9eb0ba;
         border: 1px solid #2c628b;
         background: linear-gradient(to bottom, #e5f4fc 0%, #c4e5f6 50%, #98d1ef 50.01%, #68b3db 100%);
@@ -369,7 +369,7 @@ tr.vii-nested-table-tr {
         position: relative;
         top: -7px;
         left: 6px;
-        content: "装逼现场";
+        content: "Frame";
         background: #f0f0f0;
         padding: 2px;
         z-index: 99999;
